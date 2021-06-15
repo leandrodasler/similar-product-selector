@@ -1,0 +1,20 @@
+query GET_PRODUCT_VARIANTS($identifier: ProductUniqueIdentifier) {
+	product(identifier: $identifier) @context(provider: "vtex.search-graphql") {
+		recommendations {
+      similars {
+        productId
+        productName
+        linkText
+        properties {
+          name
+          values
+        }
+        items {
+          images {
+            imageUrl
+          }
+        }
+      }
+    }
+	}
+}
