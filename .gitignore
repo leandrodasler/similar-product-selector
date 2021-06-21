@@ -27,7 +27,6 @@ $RECYCLE.BIN/
 
 # App specific
 node_modules/
-react/node_modules/
 docs/_book/
 .tmp
 .idea
@@ -39,5 +38,4 @@ build
 lerna-debug.log
 yarn-error.log
 *.orig
-yarn.lock
-react/package-lock.json
+_oldProject/

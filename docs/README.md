@@ -1,62 +1,114 @@
-# Minimum Boilerplate Theme
+📢 Use this project, [contribute](https://github.com/{OrganizationName}/{AppName}) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
 
-The minimum Boilerplate Theme is basic store front model based on the VTEX IO Store Framework.
+# APP NAME
 
-It should be used only when you want to start a new store theme without any pre-set configurations, as is the case with [Store Theme](https://github.com/vtex-apps/store-theme). 
+<!-- DOCS-IGNORE:start -->
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+<!-- DOCS-IGNORE:end -->
 
-While Store Theme gives developers a ready-to-go default store front structure, the Minimum Boilerplate Theme will enable you to build you store freely from scratch.
+Under the app's name, you should explain the topic, giving a **brief description** of its **functionality** in a store when installed.
 
-## Configuration
+Next, **add media** (either an image of a GIF) with the rendered components, so that users can better understand how the app works in practice. 
 
-### Step 1 -  Basic setup
+![Media Placeholder](https://user-images.githubusercontent.com/52087100/71204177-42ca4f80-227e-11ea-89e6-e92e65370c69.png)
 
-Access the VTEX IO [basic setup guide](https://vtex.io/docs/getting-started/build-stores-with-store-framework/2) and follow all the given steps. 
+## Configuration 
 
-By the end of the setup, you should have the VTEX command line interface (Toolbelt) installed along with a developer workspace you can work in.
+In this section, you first must **add the primary instructions** that will allow users to use the app's blocks in their store, such as:
 
-### Step 2 - Cloning the Minimum Boilerplate Theme repository
+1. Adding the app as a theme dependency in the `manifest.json` file;
+2. Declaring the app's main block in a given theme template or inside another block from the theme.
 
-[Clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) this repository to your local files to be able to effectively start working on it.
+Remember to add a table with all blocks exported by the app and their descriptions. You can verify an example of it on the [Search Result documentation](https://vtex.io/docs/components/all/vtex.search-result@3.56.1/). 
 
-Then, access the repository's directory using your terminal. 
+Next, add the **props table** containing your block's props. 
 
-### Step 3 - Editing the `Manifest.json`
+If the app exports more than one block, create several tables - one for each block. For example:
 
-Once in the repository directory, it is time to edit the Minimum Boilerplate `manifest.json` file. 
+### `block-1` props
 
-Once in are in the file, you must replace the `vendor` and `account` values. `vendor` is the account name you are working on and `account` is anything you want to name your theme. For example:
+| Prop name    | Type            | Description    | Default value                                                                                                                               |
+| ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | 
+| `XXXXX`      | `XXXXXX`       | XXXXXXXX         | `XXXXXX`        |
 
-```json
-{
-  "vendor": "storecomponents",
-  "name": "my-test-theme",
-}
-```
 
-### Step 4 -  Installing required apps
+### `block-2` props
 
-In order to use Store Framework and work on your store theme, it is needed to have both `vtex.store-sitemap` and `vtex.store` installed.
+| Prop name    | Type            | Description    | Default value                                                                                                                               |
+| ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | 
+| `XXXXX`      | `XXXXXX`       | XXXXXXXX         | `XXXXXX`        |
 
-Run  `vtex list`  and check whether those apps are already installed. 
+Prop types are: 
 
-If they aren't, run the following command to install them: `vtex install vtex.store-sitemap vtex.store -f`
+- `string` 
+- `enum` 
+- `number` 
+- `boolean` 
+- `object` 
+- `array` 
 
-### Step 5 -  Uninstalling any existing theme
+When documenting a prop whose type is `object` or `array` another prop table will be needed. You can create it following the example below:
 
-By running `vtex list`,  you can verify if any theme is installed.
+- `propName` object:
 
-It is common to already have a `vtex.store-theme`  installed when you start the store's front development process. 
+| Prop name    | Type            | Description    | Default value                                                                                                                               |
+| ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | 
+| `XXXXX`      | `XXXXXX`       | XXXXXXXX         | `XXXXXX`        |
 
-Therefore, if you find it in the app's list, copy its name and use it together with the command `vtex uninstall`. For example:
 
-```json
-vtex uninstall vtex.store-theme
-```
+Remember to also use this Configuration section to  **showcase any necessary disclaimer** related to the app and its blocks, such as the different behavior it may display during its configuration. 
 
-### Step 6- Run and preview your store
+## Modus Operandi *(not mandatory)*
 
-Then time has come to upload all the changes you made in your local files to the platform. For that, use the `vtex link` command. 
+There are scenarios in which an app can behave differently in a store, according to how it was added to the catalog, for example. It's crucial to go through these **behavioral changes** in this section, allowing users to fully understand the **practical application** of the app in their store.
 
-If the process runs without any errors, the following message will be displayed: `App linked successfully`. Then, run the `vtex browse` command to open a browser window having your linked store in it.
+If you feel compelled to give further details about the app, such as it's **relationship with the VTEX admin**, don't hesitate to use this section. 
 
-This will enable you to see the applied changes in real time, through the account and workspace in which you are working.
+## Customization
+
+The first thing that should be present in this section is the sentence below, showing users the recipe pertaining to CSS customization in apps:
+
+`In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).`
+
+Thereafter, you should add a single column table with the available CSS handles for the app, like the one below. Note that the Handles must be ordered alphabetically.
+
+| CSS Handles |
+| ----------- | 
+| `XXXXX` | 
+| `XXXXX` | 
+| `XXXXX` | 
+| `XXXXX` | 
+| `XXXXX` |
+
+
+If there are none, add the following sentence instead:
+
+`No CSS Handles are available yet for the app customization.`
+
+<!-- DOCS-IGNORE:start -->
+
+## Contributors ✨
+
+Thanks goes to these wonderful people:
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
+
+<!-- DOCS-IGNORE:end -->
+
+---- 
+
+Check out some documentation models that are already live: 
+- [Breadcrumb](https://github.com/vtex-apps/breadcrumb)
+- [Image](https://vtex.io/docs/components/general/vtex.store-components/image)
+- [Condition Layout](https://vtex.io/docs/components/all/vtex.condition-layout@1.1.6/)
+- [Add To Cart Button](https://vtex.io/docs/components/content-blocks/vtex.add-to-cart-button@0.9.0/)
+- [Store Form](https://vtex.io/docs/components/all/vtex.store-form@0.3.4/)
