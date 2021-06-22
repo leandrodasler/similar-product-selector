@@ -1,0 +1,25 @@
+.productLink {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 2px;
+  transition: all ease-in-out 0.3s;
+  margin-right: 4px;
+}
+
+.productLink:not(.productLink--selected):hover {
+  border-color: #5d5d5d;
+}
+
+.productLink--selected {
+  border-color: #0f3e99;
+  border-width: 2px;
+}
+
+.productLinkImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: 0;
+}
